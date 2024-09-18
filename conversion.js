@@ -50,37 +50,53 @@ console.log(leapYear(year2));
 console.log("odd average");
 
 function oddAvg(a) {
-
   let sum = 0;
   for (const num of a) {
     if (num % 2 === 0) {
       sum = sum + num;
     }
   }
-  newArray=[]
+  newArray = [];
   for (const num of a) {
     if (num % 2 === 0) {
-     newArray.push(num)
+      newArray.push(num);
     }
   }
-   totalValue = newArray.length
+  totalValue = newArray.length;
   result = sum / totalValue;
   return result;
 }
 const arrayX = [1, 2, 4, 5, 6, 7, 8, 9, 73];
 console.log(oddAvg(arrayX));
 //-----------------------------
-console.log('removing duplicate values from array');
-function removing(a){
-      array2X=[];
-    for (const num of a ){ 
-        if(array2X.includes(num)===false){
-            array2X.push(num)
-        } 
+console.log("removing duplicate values from array");
+function removing(a) {
+  array2X = [];
+  for (const num of a) {
+    if (array2X.includes(num) === false) {
+      array2X.push(num);
     }
-      return array2X;
+  }
+  return array2X;
 }
-const names = ['navul','gul','esbul','eriul','gul','navul']
-const numbers = [1,2,3,1,2,4,5,4,3,6,2]
+const names = ["navul", "gul", "esbul", "eriul", "gul", "navul"];
+const numbers = [1, 2, 3, 1, 2, 4, 5, 4, 3, 6, 2];
 console.log(removing(names));
 console.log(removing(numbers));
+//----------------------------------------------------------
+console.log("setting the value opposite");
+let a = 5;
+let b = 7;
+console.log(a, b);
+const temp = a;
+a = b;
+b = temp;
+console.log(a, b);
+//way-222222222222222222222
+let x = 1;
+let y = 3;
+console.log(x, y);
+[x, y] = [y, x];
+console.log(x, y);
+
+// console.log(Math.sqrt(5));
