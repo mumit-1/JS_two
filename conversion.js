@@ -100,3 +100,103 @@ console.log(x, y);
 console.log(x, y);
 
 // console.log(Math.sqrt(5));
+
+///_____________________________________
+console.log("tallest number");
+const num1 = 34;
+const num2 = 35;
+const num3 = 45;
+const arrayY = [];
+arrayY.push(num1, num3, num2);
+console.log(Math.max(...arrayY));
+
+///______________________________________
+console.log("tallest number");
+function getTall(a) {
+  let number = a[0];
+  for (const value of a) {
+    if (number < value) {
+      number = value;
+    }
+  }
+  return number;
+}
+const numberX = [12, 2, 4, 12, 3, 93, 7];
+console.log(getTall(numberX));
+//----------------------------------
+console.log("total price");
+const shirt = 3;
+const pant = 2;
+const shoe = 1;
+
+function price(a, b, c) {
+  const shirt = 400;
+  const pant = 500;
+  const shoe = 650;
+  const shirtPrice = shirt * a;
+  const pantPrice = pant * b;
+  const shoePrice = shoe * c;
+  const totalPrice = shirtPrice + pantPrice + shoePrice;
+  return totalPrice;
+}
+console.log(price(shirt, pant, shoe));
+//------------------------------
+console.log("trying to find the cheapest value from object array");
+const value = [
+  { mobile: "samsung", price: 20000 },
+  { mobile: "samsung", price: 27000 },
+  { mobile: "samsung", price: 21000 },
+  { mobile: "samsung", price: 24000 },
+  { mobile: "samsung", price: 25000 },
+];
+function arrayObject(a) {
+  let cheap = a[0];
+  for (const value of a) {
+    if (value.price < cheap.price) {
+      cheap = value;
+    }
+  }
+  return cheap;
+}
+console.log(arrayObject(value));
+//____________________________________
+console.log("price & quantity");
+const products = [
+  { name: "shirt", price: 900, quantity: 2 },
+  { name: "pant", price: 800, quantity: 1 },
+  { name: "hat", price: 400, quantity: 1 },
+  { name: "sock", price: 70, quantity: 5 },
+  { name: "gloves", price: 960, quantity: 2 },
+];
+function pay(a) {
+  let sum = 0;
+  let sum2 = 0;
+  for (const value of a) {
+    sum2 = sum2 + value.quantity;
+
+    sum = sum + value.quantity * value.price;
+  }
+  const result = "price " + sum + " quantity " + sum2;
+  return result;
+}
+console.log(pay(products));
+//_________________________________
+console.log('multi layer discount');
+function discount(a){
+  if(a <= 100){
+    result = a * 100;
+    return result;
+  }
+  else if(a <= 200){
+    system1 = a - 100;
+    result2 = (a * 100)-(system1 * (10 ));
+    return result2; 
+  }
+  else (a>200) {
+    system2 = a - 200;
+    result3 = (a * 100)-(100 * (10 ))-(system1 * (30 ));
+    return result3;
+  }
+}
+const ok = 200;
+console.log(discount(ok));
